@@ -16,6 +16,7 @@
 		69E69EA32940E8BA00FD1083 /* UnstressedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E69EA22940E8BA00FD1083 /* UnstressedTests.swift */; };
 		69E69EAD2940E8BA00FD1083 /* UnstressedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E69EAC2940E8BA00FD1083 /* UnstressedUITests.swift */; };
 		69E69EAF2940E8BA00FD1083 /* UnstressedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E69EAE2940E8BA00FD1083 /* UnstressedUITestsLaunchTests.swift */; };
+		69E69EBC2940EEAA00FD1083 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E69EBB2940EEAA00FD1083 /* GetStartedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		69E69EA82940E8BA00FD1083 /* UnstressedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnstressedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E69EAC2940E8BA00FD1083 /* UnstressedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnstressedUITests.swift; sourceTree = "<group>"; };
 		69E69EAE2940E8BA00FD1083 /* UnstressedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnstressedUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		69E69EBB2940EEAA00FD1083 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				69E69E942940E8BA00FD1083 /* Assets.xcassets */,
 				69E69E962940E8BA00FD1083 /* LaunchScreen.storyboard */,
 				69E69E992940E8BA00FD1083 /* Info.plist */,
+				69E69EBB2940EEAA00FD1083 /* GetStartedViewController.swift */,
 			);
 			path = Unstressed;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				69E69E902940E8B900FD1083 /* ViewController.swift in Sources */,
 				69E69E8C2940E8B900FD1083 /* AppDelegate.swift in Sources */,
 				69E69E8E2940E8B900FD1083 /* SceneDelegate.swift in Sources */,
+				69E69EBC2940EEAA00FD1083 /* GetStartedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
