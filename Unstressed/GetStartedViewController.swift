@@ -7,8 +7,13 @@
 
 import UIKit
 
-class GetStartedViewController: UIViewController {
-        
+
+class GetStartedViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var getStartedLabel: UILabel!
+    
+    @IBOutlet weak var getStartedTextField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +21,9 @@ class GetStartedViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+//        
     /*
     // MARK: - Navigation
 
@@ -27,4 +34,24 @@ class GetStartedViewController: UIViewController {
     }
     */
 
+        
 }
+    
+
+
+    @IBAction func PrimaryActionTriggered(_ sender: UITextField) {
+    
+        getStartedLabel.text = "Is the name " +  getStartedTextField.text! + " okay?"
+        
+        getStartedTextField.resignFirstResponder()
+        
+    }
+    
+    }
+    
+    
+
+
+    
+        
+    
