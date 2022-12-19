@@ -10,11 +10,15 @@ import UIKit
 
 class GetStartedViewController: UIViewController, UITextFieldDelegate {
     
+    var username:String = " "
+    
     @IBOutlet weak var getStartedLabel: UILabel!
     
     @IBOutlet weak var getStartedTextField: UITextField!
     
     @IBOutlet weak var okayName: UIButton!
+    
+    @IBOutlet weak var usernameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +30,6 @@ class GetStartedViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-    
         //
         /*
          // MARK: - Navigation
@@ -51,6 +54,8 @@ class GetStartedViewController: UIViewController, UITextFieldDelegate {
         
         
         okayName.isHidden = false
+        
+        usernameLabel?.text = username
         
     }
     
