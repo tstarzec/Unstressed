@@ -89,18 +89,6 @@
                                 <rect key="frame" x="87" y="464" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tl-kc-ZH6">
-                                <rect key="frame" x="170" y="541" width="72" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Yes!">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="Oah-ub-Cvn" kind="presentation" modalPresentationStyle="fullScreen" id="B3d-Vi-tdj"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UN5-N6-Aa4">
                                 <rect key="frame" x="48" y="48" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -108,6 +96,18 @@
                                 <color key="textColor" red="0.93725490570000003" green="0.94509804249999996" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tl-kc-ZH6">
+                                <rect key="frame" x="170" y="534" width="72" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Yes!">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Oah-ub-Cvn" kind="presentation" identifier="ontotabbar" modalPresentationStyle="fullScreen" id="B3d-Vi-tdj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jai-cP-D5m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -121,12 +121,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cab-fa-UMc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666.66666666666674" y="67.633928571428569"/>
+            <point key="canvasLocation" x="665" y="83"/>
         </scene>
         <!--Categories-->
         <scene sceneID="XLF-F7-a02">
             <objects>
-                <viewController id="GJR-Ms-TS3" sceneMemberID="viewController">
+                <viewController id="GJR-Ms-TS3" customClass="CategoriesViewController" customModule="Unstressed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A8X-3L-n3w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,7 +212,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
-                                    <segue destination="SXw-d6-P7Y" kind="presentation" modalPresentationStyle="fullScreen" id="83z-OA-Lb8"/>
+                                    <action selector="categoryOnePressed:" destination="GJR-Ms-TS3" eventType="touchUpInside" id="dNs-ot-CeG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikR-pC-mWg">
@@ -221,16 +221,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
-                                    <segue destination="UjC-Eu-ZQg" kind="presentation" modalPresentationStyle="fullScreen" id="l1Z-m5-4Ch"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufb-D3-H6g">
-                                <rect key="frame" x="217" y="97" width="176" height="133"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                                <connections>
-                                    <segue destination="zRn-t5-wg5" kind="presentation" modalPresentationStyle="fullScreen" id="Ah0-hL-XsY"/>
+                                    <action selector="categoryTwoPressed:" destination="GJR-Ms-TS3" eventType="touchUpInside" id="DKF-f7-1r8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DF-Cf-wSn">
@@ -239,7 +230,31 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
-                                    <segue destination="wZG-h0-yah" kind="presentation" modalPresentationStyle="fullScreen" id="F4Q-SH-QgY"/>
+                                    <action selector="categoryThree:" destination="GJR-Ms-TS3" eventType="touchUpInside" id="oQW-4W-JqF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufb-D3-H6g">
+                                <rect key="frame" x="217" y="97" width="176" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="categoryFour:" destination="GJR-Ms-TS3" eventType="touchUpInside" id="G7F-W8-2fJ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foreground" translatesAutoresizingMaskIntoConstraints="NO" id="ejg-Sq-Rr4">
+                                <rect key="frame" x="-365" y="-129" width="1057" height="1155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2b-GP-YYq">
+                                <rect key="frame" x="10" y="48" width="138" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go Back">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goBackOneClicked:" destination="GJR-Ms-TS3" eventType="touchUpInside" id="eNA-L4-zbK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -247,10 +262,14 @@
                         <color key="backgroundColor" red="0.86666667460000002" green="0.89803922179999995" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Categories" image="rectangle.3.group.fill" catalog="system" id="INx-RY-Imc"/>
+                    <connections>
+                        <outlet property="categoryOne" destination="ejg-Sq-Rr4" id="IBG-qw-Kr2"/>
+                        <outlet property="categoryOneGB" destination="I2b-GP-YYq" id="MqZ-VQ-QiZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLu-Mb-evc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2045" y="313"/>
+            <point key="canvasLocation" x="2044.9275362318842" y="312.72321428571428"/>
         </scene>
         <!--Home-->
         <scene sceneID="IAG-ot-VO8">
@@ -351,6 +370,531 @@
                                 <rect key="frame" x="-63" y="810" width="541" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foreground" translatesAutoresizingMaskIntoConstraints="NO" id="h5M-uY-EAb">
+                                <rect key="frame" x="-294" y="-84" width="1057" height="1155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1z-XJ-k56">
+                                <rect key="frame" x="13" y="312" width="391" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="articleTwoClicked:" destination="rWw-mb-9be" eventType="touchUpInside" id="P4h-5K-HGp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hB-mA-dYx">
+                                <rect key="frame" x="3" y="502" width="391" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="articleThreeClicked:" destination="rWw-mb-9be" eventType="touchUpInside" id="Kp9-oc-vJy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqb-x2-QcU">
+                                <rect key="frame" x="3" y="693" width="391" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="articleFourClicked:" destination="rWw-mb-9be" eventType="touchUpInside" id="Nbz-3a-Pvt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6I-g2-3i0">
+                                <rect key="frame" x="0.0" y="68" width="414" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="topArticleButton:" destination="rWw-mb-9be" eventType="touchUpInside" id="sAq-Pm-txs"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chevron.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wWg-Dd-Ft7">
+                                <rect key="frame" x="20" y="57" width="40" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YwB-wQ-A1n">
+                                <rect key="frame" x="0.0" y="109" width="414" height="693"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w9-fR-qea">
+                                        <rect key="frame" x="8" y="0.0" width="398" height="710"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.86666667460000002" green="0.89803922179999995" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <string key="text">The Body Scan 
+ 
+Sometimes you can be so caught up in your stress that you don't realize that the physical discomfort you're experiencing—such as headaches, back and shoulder pain, and tense muscles—is connected to your emotional state. Body scan meditation is a good way to release physical tension you might not even realize you're experiencing. 
+
+Body scanning involves paying attention to parts of the body and bodily sensations in a gradual sequence from feet to head. By mentally scanning yourself, you bring awareness to every single part of your body, noticing any aches, pains, tension, or general discomfort. The goal is not to relieve the pain completely, but to get to know and learn from it so you can better manage it. 
+
+Best when performed daily (or even several times a day), practicing body scan meditation is associated with many mental and physical health benefits. Research shows that stress reduction is one of the primary benefits of body scan meditation, which in turn can have physical benefits including reduced inflammation, fatigue, and insomnia. In this way, this body scanning works to break the cycle of physical and psychological tension that can feed on itself. 
+
+The body scan meditation is a very useful and effective meditation that can help you return to and maintain a relaxed state when you become too tense. 
+
+As with all forms of meditation, doing a body scan is meant to be simple. Below are some instructions to get you started. 
+
+1. Get comfortable. Lying down is preferable, particularly if you're doing a body scan meditation before going to sleep. If that's not possible or comfortable, sitting comfortably is also an option. 
+
+2.Take a few deep breaths. Let your breathing slow down, and start breathing from your belly instead of from your chest, letting your abdomen expand and contract with each breath. If you find your shoulders rising and falling with each breath, focus more on breathing from your belly, as though a balloon is inflating and deflating in your abdomen with each breath. 
+
+3. Bring awareness to your feet. Now slowly bring your attention down to your feet. Begin observing sensations in your feet. If you notice pain, acknowledge it and any thoughts or emotions that accompany it, and gently breathe through it. 
+
+4. Breathe into the tension. If you notice any uncomfortable sensations, focus your attention on them. Breathe into them, and see what happens. Visualize the tension leaving your body through your breath and evaporating into the air. Move on when you feel ready. 
+
+5. Scan your entire body. Continue this practice with each area of your body, gradually moving up through your feet until you reach the top of your head. Notice how you feel and where you're holding your stress. If there's any tightness, pain, or pressure, continue to breathe into any tightness, pain, or pressure you're feeling. This can help you release tension in your body now, and be more aware of it in the future so you can release it then, too. 
+
+Practice this body scan meditation anytime you feel stress or several times throughout the day as a regular practice. If you don't have a lot of time, you can do an abbreviated version of this body scan meditation by just sitting and noticing any place in your body that you're carrying tension, rather than moving from part to part. This will become easier the more you practice the body scan meditation. 
+
+The body scan meditation can promote body awareness, stress awareness, and relaxation. Practice it often. You can also try progressive muscle relaxation, breathing exercises, or visualization exercises for releasing stress and tension in your body.
+
+By Elizabeth Scott, M.S. from rutgers.edu.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="fHi-J6-2lx"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="YFI-tu-OIB"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gUb-Fj-pqL">
+                                <rect key="frame" x="0.0" y="101" width="414" height="693"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPQ-Rl-FjT">
+                                        <rect key="frame" x="8" y="0.0" width="398" height="710"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.86666667460000002" green="0.89803922179999995" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <string key="text">When you feel depressed, you will naturally find ways to cope with the negative feelings. However, there are healthy and unhealthy ways to cope with depression. Negative coping tactics like drugs, alcohol, overeating, or self-harm are forms of self-medication that often cause more problems, making depression worse. Instead, try engaging in activities that bring joy and help with relaxation. Here is a list of 31 things you can do to help you beat the blues. Try doing one thing every day to build healthy coping habits.
+ 
+Socialize — people with depression often feel isolated. Don’t isolate yourself from your loved ones. Reach out to friends and family and build yourself a strong support system.
+ 
+Exercise — exercise is a great habit for anyone to pick up, but it is especially important for those who have depression. In fact, exercise has been known to reduce symptoms of depression and anxiety.
+ 
+Face your fears — you feel a sense of accomplishment when you do hard things that scare you, which can make you feel better about yourself. Avoiding procrastination and challenging yourself with new things will help you build self-confidence and resiliency.
+ 
+Healthy eating habits — your diet is a key aspect of your health that directly correlates with your mood. If you want to ease your depression symptoms, don’t skip meals, take b vitamins, eat omega 3 fatty acids, eat less sugar and carbs, and limit your intake of alcohol and caffeine. Foods high in carbs, sugar, caffeine, and alcohol can cause inflammation in the body, which affects our ability to maintain mood stability.
+ 
+Get creative — using your emotions to fuel your creativity is a very positive way to deal with depression through catharsis. Try painting, writing stories and poetry, or even writing music.
+ 
+Get a pet — taking care of an animal will not only allow you to focus your energy on something other than your depression but also allow you to form a strong bond, making you feel less isolated.
+ 
+Volunteer — volunteering is a great way to avoid negative thoughts and help those who may be worse off than you. Serving others is a proven way to build self-esteem and resiliency. Look for volunteer opportunities in your area.
+ 
+Find a hobby — spend time doing something you love each day. Spending time consistently to do things that bring us joy has a compound effect on our overall happiness and quality of life.
+ 
+Get enough sleep — sleep also correlates with your mood. If you’re not sleeping well, then you probably feel more depressed and irritable, not to mention tired. Talk to your doctor about your options to help you get a good night’s rest.
+ 
+Relax — relaxation can also help you cope with negative feelings. Take a hot shower, a bath, and watch a movie or TV show. You will be surprised at what some good R&amp;R can do for your mood.
+ 
+Pay attention to your thoughts — When you learn how to recognize negative thoughts, you are better equipped to deal with them.
+ 
+Deep breathing — deep breathing is another calming skill you can use when you are in a stressful situation and need to calm down.
+ 
+Relinquish control — you can’t control every aspect of your life, so you might feel better when you just let go and learn to roll with the punches.
+ 
+Learn your triggers — if you know what triggers your depression, you can stay away from them or learn how to better cope when those situations arise.
+ 
+Build a routine and stick to it — although you can’t control everything, you can control some things. Try making a daily routine and sticking to it, focusing your energy on what you do have a say in rather than what you don’t.
+ 
+Do things that boost your self-esteem — those with depression often have low self-esteem, so do your makeup, get a new hairdo, take a fun picture, or write down things you like about yourself. Self-care is a huge part of building self-esteem.
+ 
+Clean or organize — your space is another aspect of your life that you have control over. So use cleaning and organizing as an outlet for your depression. Your life may be a mess, but your bedroom, kitchen, and other rooms in your house don’t have to be.
+ 
+Meditate — meditation is another skill that can help you learn how to cope with tough situations. Meditation can help you clear your mind of the negative thoughts and press reset.
+ 
+Redecorate — if cleaning isn’t enough, try redecorating. A change of scenery could be just what you need to get you out of that funk.
+ 
+Treat yourself — reward yourself when you do something hard or overcome a difficult situation
+ 
+Keep a journal — a journal not only lets you air out your frustrations but also lets you track your progress. You may be surprised at how far you’ve come when you look back at past entries.
+ 
+Go to therapy — realizing that you need help is a big step in overcoming depression. If you feel like you can’t cope on your own, reach out to a professional for help.
+ 
+Get in touch with your spirituality — go to church, read scriptures, or say a prayer. Do something that makes you feel connected to a higher power.
+ 
+Listen to music — music is another fantastic way to cope with depression. Make a playlist of uplifting songs to listen to when you’re feeling down.
+ 
+Go for a walk — sometimes getting away for a while and taking a walk can help you deal with your emotions. It also helps to get outside and get some much-needed sunlight.
+ 
+Unplug — when you feel overwhelmed by life, turn off your electronics and take some time to recharge. But don’t isolate yourself from friends and loved ones.
+ 
+Let yourself cry — instead of avoiding or pushing down the emotions when they come, try working through them by letting go and having a good cry.
+ 
+Do yoga — yoga is like exercising, deep breathing, and meditation all rolled into one.
+ 
+Try acupuncture — acupuncture eases tension in your body, relaxing you, and in turn, easing some of the negativity you may be feeling.
+ 
+Take a class on something that interests you — learning is a great way to stimulate your brain and put your focus into a positive activity. Find something that interests you or a skill that you always wanted to pick up, and sign up for a class.
+ 
+Follow doctor’s orders — Sometimes you can’t beat depression on your own, so you need to follow your doctor’s instructions by regularly taking your medication, attending follow-up appointments, and maintaining your physical health.
+
+Adapted from https://serenitymentalhealthcenters.com/articles/31-coping-skills-for-depression/.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="0kq-eq-Bst"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="WNv-rX-GYh"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppB-SU-SKa">
+                                <rect key="frame" x="0.0" y="101" width="414" height="693"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3r-8R-smZ">
+                                        <rect key="frame" x="8" y="0.0" width="398" height="710"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.86666667460000002" green="0.89803922179999995" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <mutableString key="text">Breathing is a necessity of life that usually occurs without much thought. When you breathe in, blood cells receive oxygen and release carbon dioxide. Carbon dioxide is a waste product that's carried back through your body and exhaled.
+Improper breathing can upset the oxygen and carbon dioxide exchange and contribute to anxiety, panic attacks, fatigue, and other physical and emotional disturbances.
+The next time you’re feeling anxious, there are a variety of anxiety breathing exercises to try. Learn how to use breathing exercises to help relieve feelings of anxiety and stress.
+ 
+ 
+Tip: How you breathe in and how depends on the type of breathing exercise you are using. Many breath exercises involve breathing in slowly through your nose and exhaling through your mouth., but some others may direct you to breathe in and out through your nose.
+ 
+ 
+Alternate-nostril breathing (nadi shodhana) involves blocking off one nostril at a time as you breathe through the other, alternating between nostrils in a regular pattern. 
+
+It's best to practice this type of anxiety-relieving breathing in a seated position in order to maintain your posture.
+
+Position your right hand by bending your pointer and middle fingers into your palm, leaving your thumb, ring finger, and pinky extended. This is known as Vishnu mudra in yoga. 
+
+Close your eyes or softly gaze downward. 
+
+Inhale and exhale to begin. 
+
+Close off your right nostril with your thumb. 
+
+Inhale through your left nostril.
+
+Close off your left nostril with your ring finger.
+
+Open and exhale through your right nostril.
+
+Inhale through your right nostril.
+
+Close off your right nostril with your thumb.
+
+Open and exhale through your left nostril.
+
+Inhale through your left nostril.
+
+Work up to 10 rounds of this breathing pattern. If you begin to feel lightheaded, take a break by releasing both nostrils and breathing normally.
+ 
+
+According to The American Institute of Stress, 20 to 30 minutes of "belly breathing," also known as abdominal breathing or diaphragmatic breathing, each day can reduce stress and anxiety.
+
+Find a comfortable, quiet place to sit or lie down. For example, try sitting in a chair, sitting cross-legged, or lying on your back with a small pillow under your head and another under your knees.
+
+Place one hand on your upper chest and the other hand on your belly, below the ribcage.
+
+Allow your belly to relax, without forcing it inward by squeezing or clenching your muscles.
+
+Breathe in slowly through your nose. The air should move into your nose and downward so that you feel your stomach rise with your other hand and fall inward (toward your spine).
+Exhale slowly through slightly pursed lips. Take note of the hand on your chest, which should remain relatively still.
+ 
+Although the sequence frequency will vary according to your health, most people begin by doing the exercise three times and working up to five to 10 minutes, one to four times a day.
+ 
+ 
+
+Also known as four-square breathing, box breathing is very simple to learn and practice. In fact, if you've ever noticed yourself inhaling and exhaling to the rhythm of a song, you're already familiar with this type of paced breathing. It goes like this:
+
+Exhale to a count of four.
+
+Hold your lungs empty for a four-count.
+
+Inhale to a count of four.
+
+Hold the air in your lungs for a count of four.
+
+Exhale and begin the pattern anew.
+ 
+
+The 4-7-8 breathing exercise, also called the relaxing breath, acts as a natural tranquilizer for the nervous system. 
+
+At first, it's best to perform the exercise seated with your back straight. Once you become more familiar with this breathing exercise, however, you can perform it while lying in bed.
+
+Place and keep the tip of your tongue against the ridge of tissue behind your upper front teeth for the duration of the exercise.
+Completely exhale through your mouth, making a "whoosh" sound.
+
+Close your mouth and inhale quietly through your nose to a mental count of four.
+
+Hold your breath for a count of seven.
+Exhale completely through your mouth, making a whoosh sound to a count of eight.
+ 
+
+Lion’s breath, or simhasana in Sanskrit, during which you stick out your tongue and roar like a lion, is another helpful deep breathing practice. It can help relax the muscles in your face and jaw, alleviate stress, and improve cardiovascular function.4
+
+The exercise is best performed in a comfortable, seated position, leaning forward slightly with your hands on your knees or the floor.
+
+Spread your fingers as wide as possible.
+
+Inhale through your nose.
+
+Open your mouth wide, stick out your tongue, and stretch it down toward your chin.
+
+Exhale forcefully, carrying the breath across the root of your tongue.
+
+While exhaling, make a "ha" sound that comes from deep within your abdomen.
+
+Breathe normally for a few moments.
+
+Repeat lion’s breath up to seven times.
+ 
+
+Mindfulness meditation involves focusing on your breathing and bringing your attention to the present without allowing your mind to drift to the past or future. 
+
+Engaging in mindfulness breathing exercises serves the same purpose, which can help ease your anxiety.
+
+One mindfulness breathing exercise to try involves choosing a calming focus, including a sound ("om"), positive word ("peace"), or phrase ("breathe in calm, breathe out tension") to repeat silently as you inhale or exhale. 
+
+Let go and relax. If you notice that your mind has drifted, take a deep breath and gently return your attention to the present.
+ 
+ 
+
+Pursed-lip breathing is a simple breathing technique that will help make deep breaths slower and more intentional. This technique has been found to benefit people who have anxiety associated with lung conditions like emphysema and chronic obstructive pulmonary disease (COPD).
+
+Sit in a comfortable position with your neck and shoulders relaxed.
+
+Keeping your mouth closed, inhale slowly through your nostrils for two seconds.
+
+Exhale through your mouth for four seconds, puckering your lips as if giving a kiss.
+Keep your breath slow and steady while breathing out.
+
+To get the correct breathing pattern, experts recommend practicing pursed-lip breathing four to five times a day.
+ 
+
+Resonance breathing, or coherent breathing, can help you get into a relaxed state and reduce anxiety.
+
+Lie down and close your eyes.
+Gently breathe in through your nose, mouth closed, for a count of six seconds. Don't fill your lungs too full of air.
+Exhale for six seconds, allowing your breath to leave your body slowly and gently without forcing it.
+Continue for up to 10 minutes.
+Take a few additional minutes to be still and focus on how your body feels.
+ 
+You can perform a simple breathing exercise as often as needed. It can be done standing up, sitting, or lying down. If you find this exercise difficult or believe it's making you anxious or panicky, stop for now. Try it again in a day or so and build up the time gradually.
+​Inhale slowly and deeply through your nose. Keep your shoulders relaxed. Your abdomen should expand, and your chest should rise very little.
+
+Exhale slowly through your mouth. As you blow air out, purse your lips slightly but keep your jaw relaxed. You may hear a soft “whooshing” sound as you exhale.
+
+Repeat this breathing exercise. Do it for several minutes until you start to feel better.
+ 
+Sometimes people with a panic disorder initially feel increased anxiety or panic while doing this exercise. This may be due to anxiety caused by focusing on your breathing, or you may be unable to do the exercise correctly without some practice.
+ 
+ 
+When people are anxious, they tend to take rapid, shallow breaths that come directly from the chest.
+This type of breathing, called thoracic or chest breathing, causes an upset in the body's oxygen and carbon dioxide levels, resulting in increased heart rate, dizziness, muscle tension, and other physical sensations. Your blood is not being properly oxygenated, and this may signal a stress response that contributes to anxiety and panic attacks.
+
+Diaphragmatic or deep breathing, on the other hand, stimulates the parasympathetic nervous system, which is part of the peripheral nervous system responsible for regulating heartbeat, blood flow, breathing, and digestion.
+ 
+Deep breathing helps you avoid the "fight-or-flight" response (acute stress response) to mentally or physically terrifying situations.
+ 
+Any type of deep breathing exercise can be effective for relieving anxiety. Experiment with a few different types to figure out which one is most effective and practical for you.
+ 
+
+Most people aren't really conscious of the way they're breathing but, generally, there are two types of breathing patterns:
+
+Diaphragmatic (abdominal) breathing: This type of breathing is a type of deep, even breathing that engages your diaphragm, allowing your lungs to expand and creating negative pressure that drives air in through the nose and mouth, filling your lungs.This is the way newborn babies naturally breathe. You're also probably using this pattern of breathing when you're in a relaxed stage of sleep.
+
+Thoracic (chest) breathing: This type of breathing comes from the chest and involves short, rapid breaths. When you're anxious, you might not even be aware that you're breathing this way.
+The easiest way to determine your breathing pattern is to put one hand on your upper abdomen, near the waist, and the other in the middle of your chest. As you breathe, notice which hand raises the most.
+
+If you're breathing properly, your abdomen should expand and contract with each breath (and the hand on it should raise the most). It's especially important to be aware of these differences during stressful and anxious times when you're more likely to breathe from your chest.
+ 
+Pay attention to how you breathe when you are relaxed vs. when you feel stressed and anxious. Practicing breath exercises regularly can help you learn to consciously shift to this type of breathing when stressed, which can calm your body and induce a relaxation response.
+ 
+
+Adapted from VeryWellMind.
+</mutableString>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zyV-Rg-Z4x"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="qrT-Ai-sYX"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vsZ-aS-PP2">
+                                <rect key="frame" x="0.0" y="101" width="414" height="693"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qy8-rf-7Zl">
+                                        <rect key="frame" x="8" y="0.0" width="398" height="710"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.86666667460000002" green="0.89803922179999995" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <mutableString key="text">When we’re stressed, self-care is often the first thing to go. Why is this?
+
+1. Our brains go into fight-or-flight mode and our perspective narrows. We don’t see we have options—options for coping with stress and making ourselves feel better.
+
+2. We’re so busy trying to solve problems that we’re stuck in “doing mode”—trying to get more and more done—when switching to “being mode” may be just the break we need.
+
+3. We may not have a “go-to” list of self-care activities. Self-care has to become a habit so that when we’re dealing with stress, we remember that, “Hey, I need to take care of myself in this situation.” 
+
+And, you need a variety of activities to try—if one doesn’t work, you can switch to another.
+Fortunately, there are several pathways to self-care, and none of them need to be difficult or take a lot of planning.
+
+
+When you feel stressed and need a calm mind, try focusing on the sensations around you—sights, smells, sounds, tastes, touch. This will help you focus on the present moment, giving you a break from your worries.
+Breathe in fresh air.
+Snuggle under a cozy blanket.
+
+Listen to running water.
+
+Sit outdoors by a fire pit, watching the flames and listening to the night sounds.
+
+Take a hot shower or a warm bath.
+
+Get a massage.
+
+Cuddle with a pet.
+
+Pay attention to your breathing.
+
+Burn a scented candle.
+
+Wiggle your bare feet in overgrown grass.
+
+Stare up at the sky.
+
+Lie down where the afternoon sun streams in a window.
+
+Listen to music.
+
+
+Pleasure:
+
+A great way to take care of yourself when you’re coping with stress is to engage in a pleasurable activity. Try one of these ideas.
+
+Take yourself out to eat.
+
+Be a tourist in your own city.
+
+Garden.
+
+Watch a movie.
+
+Make art. Do a craft project.
+
+Journal.
+
+Walk your dogs.
+
+Go for a photo walk.
+
+
+Mental/Mastery:
+
+You can also give yourself a boost by doing a task that you’ve been avoiding or challenging your brain in a novel way. This can also boost self-confidence.
+
+Clean out a junk drawer or a closet.
+
+Take action (one small step) on something you’ve been avoiding.
+
+Try a new activity.
+
+Drive or bike to a new place.
+
+Make a list.
+
+Immerse yourself in a crossword puzzle.
+
+Do a word search.
+
+Read something on a topic you wouldn’t normally.
+
+
+Spiritual
+
+Getting in touch with your values—what really matters—is a sure way to cope with stress and foster a calm mind. Activities that people define as spiritual are very personal. Here are a few ideas.
+
+Attend church.
+
+Read poetry or inspiring quotes.
+
+Light a candle.
+
+Meditate.
+
+Write in a journal.
+
+Spend time in nature.
+
+Pray.
+
+List five things you’re grateful for.
+
+
+Emotional
+
+Dealing with our emotions can be challenging when we’re coping with stress. We tend to label emotions as “good” or “bad,” but this isn’t helpful. Instead:
+Accept your feelings. They’re all OK. Really.
+Write your feelings down. Here’s a list of feeling words.
+
+Cry when you need to.
+
+Laugh when you can. (Try laughter yoga.)
+
+Practice self-compassion.
+
+
+Physical
+
+Coping with stress by engaging the body is great because you can bypass a lot of unhelpful mental chatter. It’s hard to feel stressed when you’re doing one of the following self-care activities.
+
+Try yoga.
+
+Go for a walk or a run.
+
+Dance.
+
+Stretch.
+
+Go for a bike ride.
+
+Don’t skip sleep to get things done.
+
+Take a nap.
+
+
+Social
+
+Connecting with others is an important part of self-care. This can mean activities such as:
+
+Go on a lunch date with a good friend.
+
+Calling a friend on the phone.
+
+Participating in a book club.
+
+Joining a support group.
+
+It can also mean remembering that others go through similar experiences and difficulties as we do.
+
+
+We’re not alone.
+
+Simply acknowledging that we’re all part of this human experience can lessen isolation and lead to a calm mind. That’s the best self-care strategy I know.
+
+By Barbara Markway Ph.D from Psychology Today.
+</mutableString>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="jL3-Mk-oXQ"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5Dm-rA-EkD"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmc-1I-kle">
+                                <rect key="frame" x="10" y="48" width="57" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="goBack:" destination="rWw-mb-9be" eventType="touchUpInside" id="wwc-mV-PTr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zfP-WP-gsG"/>
                         <color key="backgroundColor" red="0.93725490570000003" green="0.94509804249999996" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -360,6 +904,16 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="articleFourScroll" destination="vsZ-aS-PP2" id="4pN-a9-tAi"/>
+                        <outlet property="articleFourTextView" destination="Qy8-rf-7Zl" id="3Pg-ra-KW6"/>
+                        <outlet property="articleOneScroll" destination="YwB-wQ-A1n" id="6N4-ZZ-2Es"/>
+                        <outlet property="articleOneTextView" destination="5w9-fR-qea" id="WjY-dY-XjV"/>
+                        <outlet property="articleThreeScroll" destination="ppB-SU-SKa" id="PFD-12-6xK"/>
+                        <outlet property="articleThreeTextView" destination="n3r-8R-smZ" id="dYa-Yh-eGN"/>
+                        <outlet property="articleTwoScroll" destination="gUb-Fj-pqL" id="lpA-Kw-PYN"/>
+                        <outlet property="articleTwoTextView" destination="pPQ-Rl-FjT" id="n8l-c2-6Yz"/>
+                        <outlet property="chevron" destination="wWg-Dd-Ft7" id="k0E-GQ-Emz"/>
+                        <outlet property="foreground" destination="h5M-uY-EAb" id="C7q-Uh-waA"/>
                         <outlet property="homeLabel" destination="Aod-J3-zpL" id="Mq8-pv-UCA"/>
                     </connections>
                 </viewController>
@@ -373,7 +927,7 @@
         <!--Other-->
         <scene sceneID="gwU-Le-7zH">
             <objects>
-                <viewController id="YeW-nw-Qr8" sceneMemberID="viewController">
+                <viewController id="YeW-nw-Qr8" customClass="SettingsViewController" customModule="Unstressed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KGh-Qa-4NR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -447,7 +1001,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
-                                    <segue destination="Cm4-PU-O4w" kind="presentation" modalPresentationStyle="fullScreen" id="eHH-qI-rmi"/>
+                                    <action selector="aboutUsClicked:" destination="YeW-nw-Qr8" eventType="touchUpInside" id="cEh-mI-dx0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4m-Kz-wJz">
@@ -456,7 +1010,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
-                                    <segue destination="PSd-1p-SHR" kind="presentation" modalPresentationStyle="fullScreen" id="IkV-Fe-KVs"/>
+                                    <action selector="hotlinesClicked:" destination="YeW-nw-Qr8" eventType="touchUpInside" id="Gc2-Wb-eHR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJc-DT-gIG">
@@ -465,18 +1019,115 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
-                                    <segue destination="AJS-bb-WC1" kind="presentation" modalPresentationStyle="fullScreen" id="OcT-NT-dIy"/>
+                                    <action selector="attributionClicked:" destination="YeW-nw-Qr8" eventType="touchUpInside" id="pbr-Ig-9xW"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foreground" translatesAutoresizingMaskIntoConstraints="NO" id="65W-9N-dPt">
+                                <rect key="frame" x="-319" y="-195" width="1057" height="1155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="YO2-dG-8en">
+                                <rect key="frame" x="-305" y="-97" width="1029" height="695"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iM7-Pc-PF2">
+                                <rect key="frame" x="26" y="526" width="343" height="331"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Our app is designed to draw in mainly a teenage user base, in an effort to support teens who are going through very mentally stressful situations. It has different school and work related exercises to specifically aid teens.
+</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmM-0o-DNn">
+                                <rect key="frame" x="26" y="301" width="349" height="331"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text"> Keeping the mind in good shape is becoming increasingly harder during crazy times, but we have a solution. CodeBusters Inc™️ vows to help teenagers who are struggling with their mental health through simple, easily accessible resources.
+</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chevron.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="npX-PY-ENP">
+                                <rect key="frame" x="14" y="61" width="58" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISy-Tp-AF5">
+                                <rect key="frame" x="14" y="48" width="58" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="goBackClicked:" destination="YeW-nw-Qr8" eventType="touchUpInside" id="6H2-9X-8aQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fij-aG-0PH">
+                                <rect key="frame" x="25" y="-13" width="368" height="791"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Suicide + Crisis Hotline - 988
+
+Trans Lifeline - 877-565-8860
+
+LGBT National Youth Hotline - 800-246-7743
+
+TrevorLifeline - 866-488-7386
+
+Lifeline - 800-273-8255
+
+GLBT National Hotline - 888-843-4564
+
+BlackLine - 1-800-604-5841
+
+HopeLine - 1-800-422-4673
+</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone.bubble.left.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PWY-zp-3DC">
+                                <rect key="frame" x="70" y="640.5" width="274" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.34117650989999998" green="0.2941176593" blue="0.85882353779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABb-bx-fPp">
+                                <rect key="frame" x="42" y="120" width="335" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">&lt;a href="https://www.freepik.com/free-vector/hand-drawn-world-mental-health-day_9697075.htm#query=mental%20health&amp;position=3&amp;from_view=search&amp;track=sph"&gt;Image by pikisuperstar&lt;/a&gt; on Freepik
+
+&lt;a href="https://www.freepik.com/free-vector/naive-meditation-stickers-collection_16665854.htm#query=meditation&amp;position=25&amp;from_view=search&amp;track=sph"&gt;Image by pikisuperstar&lt;/a&gt; on Freepik
+
+Image by &lt;a href="https://www.freepik.com/free-vector/self-care-concept_7851289.htm#query=self%20care&amp;position=8&amp;from_view=search&amp;track=sph"&gt;Freepik&lt;/a&gt;
+
+Image by &lt;a href="https://www.freepik.com/free-vector/set-mental-health-logo-templates_11827531.htm?query=stress#from_view=detail_alsolike"&gt;Freepik&lt;/a&gt;
+
+Image by &lt;a href="https://www.freepik.com/free-vector/organic-flat-people-meditating-illustration_13379570.htm#query=mindfulness&amp;position=4&amp;from_view=search&amp;track=sph"&gt;Freepik&lt;/a&gt;
+
+Image by &lt;a href="https://www.freepik.com/free-vector/organic-flat-people-meditating-illustration_13297285.htm#query=mindfulness&amp;position=29&amp;from_view=search&amp;track=sph"&gt;Freepik&lt;/a&gt;
+</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mPv-zx-vec"/>
                         <color key="backgroundColor" red="0.86666667460000002" green="0.89803922179999995" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Other" image="ellipsis" catalog="system" id="4JG-0V-haf"/>
+                    <connections>
+                        <outlet property="attributionLabel" destination="ABb-bx-fPp" id="Jfc-Od-XSj"/>
+                        <outlet property="chevron" destination="npX-PY-ENP" id="wHV-ca-gYB"/>
+                        <outlet property="foreground" destination="65W-9N-dPt" id="f9M-Ax-9zF"/>
+                        <outlet property="goBack" destination="ISy-Tp-AF5" id="Pa4-K1-g2s"/>
+                        <outlet property="hotlinesLabel" destination="fij-aG-0PH" id="ngw-cA-Xqr"/>
+                        <outlet property="logo" destination="YO2-dG-8en" id="0nb-0O-hty"/>
+                        <outlet property="paragraphOneLabel" destination="mmM-0o-DNn" id="Mqy-gR-OrO"/>
+                        <outlet property="paragraphTwoLabel" destination="iM7-Pc-PF2" id="iNV-uR-sXY"/>
+                        <outlet property="phoneImage" destination="PWY-zp-3DC" id="ZSH-Qv-Bak"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIq-0B-kMb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3209" y="-23"/>
+            <point key="canvasLocation" x="3682.608695652174" y="142.63392857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="81U-tu-hYi">
@@ -558,7 +1209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IzE-Me-X30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3555" y="-624"/>
+            <point key="canvasLocation" x="3607" y="-741"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TNm-vw-erT">
@@ -685,112 +1336,13 @@ Image by &lt;a href="https://www.freepik.com/free-vector/organic-flat-people-med
             </objects>
             <point key="canvasLocation" x="4206" y="465"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="gnE-8o-O7i">
-            <objects>
-                <viewController id="zRn-t5-wg5" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OAW-Sm-cMl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0v7-j4-gxE">
-                                <rect key="frame" x="20" y="48" width="100" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Go Back">
-                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="21"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ni3-H3-0oE"/>
-                        <color key="backgroundColor" red="0.86666667460000002" green="0.89803922179999995" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bo2-5l-h3O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3461" y="729"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="F8b-bw-o4Q">
-            <objects>
-                <viewController id="SXw-d6-P7Y" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tAV-f4-Bl7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqM-mX-QIx">
-                                <rect key="frame" x="20" y="48" width="100" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Go Back">
-                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="21"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="kfe-V4-DQC"/>
-                        <color key="backgroundColor" red="0.86666667460000002" green="0.89803922179999995" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M6E-3q-lIV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1387" y="577"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="3xi-vf-rOC">
-            <objects>
-                <viewController id="UjC-Eu-ZQg" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TBn-f7-ATD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4p-i3-Dqd">
-                                <rect key="frame" x="20" y="48" width="100" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Go Back">
-                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="21"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="2xF-6Y-xIb"/>
-                        <color key="backgroundColor" red="0.86666667460000002" green="0.89803922179999995" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CPD-te-BNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="883" y="729"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9J3-g3-IOy">
-            <objects>
-                <viewController id="wZG-h0-yah" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9wt-y8-eZy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWc-F9-fG5">
-                                <rect key="frame" x="20" y="48" width="100" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Go Back">
-                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="21"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="NN8-k2-gEF"/>
-                        <color key="backgroundColor" red="0.86666667460000002" green="0.89803922179999995" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jDY-lJ-FIs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2797" y="869"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Bottom Bar" width="592" height="228"/>
         <image name="Category" width="373" height="271"/>
         <image name="Footer Image" width="1011" height="1042"/>
         <image name="Footer Image 2" width="767" height="1078"/>
+        <image name="Foreground" width="384" height="650"/>
         <image name="Line" width="276" height="99"/>
         <image name="Logo" width="1200" height="1200"/>
         <image name="Middle Cell" width="3823" height="1720"/>
@@ -803,6 +1355,7 @@ Image by &lt;a href="https://www.freepik.com/free-vector/organic-flat-people-med
         <image name="WelcomeGradient" width="368" height="718"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="depression" width="587" height="655"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
@@ -812,6 +1365,9 @@ Image by &lt;a href="https://www.freepik.com/free-vector/organic-flat-people-med
         <image name="rectangle.3.group.fill" catalog="system" width="128" height="81"/>
         <image name="sleep" width="587" height="655"/>
         <image name="stress" width="587" height="655"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

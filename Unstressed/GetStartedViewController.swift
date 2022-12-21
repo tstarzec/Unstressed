@@ -23,39 +23,53 @@ class GetStartedViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        okayName.isHidden = true
+        okayName?.alpha = 0
+        getStartedLabel?.alpha = 0
+        getStartedTextField?.alpha = 0
+        
+        UIView.animate(withDuration: 1, delay: 0.2) {
+            self.getStartedLabel.alpha = 1 }
+        
+        UIView.animate(withDuration: 1, delay: 0.2) {
+            self.getStartedTextField.alpha = 1 }
+        
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        //
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
-        
-        
+
     }
+    
+
+    // Do any additional setup after loading the view.
+    
+    
+    
+    
+    //
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     
     
     @IBAction func PrimaryActionTriggered(_ sender: UITextField) {
+        
+        UIView.animate(withDuration: 1, delay: 0) {
+            self.okayName.alpha = 1 }
         
         getStartedLabel.text = "Is the name " +  getStartedTextField.text! + " okay?"
         
         getStartedTextField.resignFirstResponder()
         
         
-        okayName.isHidden = false
         
-        usernameLabel?.text = username
         
     }
     
